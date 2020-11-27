@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup
+
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylepop.css">
+</head>
+
+<body>
+    
+    <center> <button type="button" class="btn " id="main_btn" data-toggle="modal" data-target="#staticBackdrop">
+    
+  </button></center>
+
+    <!-- Modal -->
+    <div class="modal fade " id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Event Type</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body ">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 19px;">Paid-event or free-event?</div>
+
+                            <div class="w-100"></div>
+                            <div class="col">
+
+                                <div class="col" style="border: 1px solid grey;">
+                                    <input type="radio" class="check_btn" name="check" onclick="f1()">
+                                    <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-cash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M15 4H1v8h14V4zM1 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H1z"/>
+                                    <path d="M13 4a2 2 0 0 0 2 2V4h-2zM3 4a2 2 0 0 1-2 2V4h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 12a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+                                  </svg> <br> Paid</div>
+                            </div>
+                            <div class="col">
+                                <div class="col" style="border: 1px solid grey;">
+                                    <input type="radio" class="check_btn" name="check" onclick="fi()">
+                                    <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-cash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M15 4H1v8h14V4zM1 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H1z"/>
+                                    <path d="M13 4a2 2 0 0 0 2 2V4h-2zM3 4a2 2 0 0 1-2 2V4h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 12a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+                                  </svg> <br> Free</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-primary" id="btn1" data-toggle="modal" data-dismiss="modal" data-target="#exampleModal">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 2 modal -->
+    <div class="modal fade modal2" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col" style="padding: 0px;">
+                                <svg width="2em" height="2em" style="float: left; padding:0px" viewBox="0 0 16 16" class="bi bi-arrow-left-short close" data-dismiss="modal" aria-label="Close" fill="currentColor" xmlns="http://www.w3.org/2000/svg" onclick="fade1()">
+                                <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                              </svg>
+                            </div>
+                            <div class="col-6">
+                                <h5 class="modal-title" id="staticBackdropLabel"> Paid Event </h5>
+                            </div>
+                            <div class="col">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="modal-body ">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 19px;">Single-cost event or multiple-cost event?
+
+                                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Help!!">
+                                    <button class="btn " style="pointer-events: none;" type="button" disabled><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
+                                        <circle cx="8" cy="4.5" r="1"/>
+                                      </svg></button>
+                                  </span>
+                            </div>
+
+                            <div class="w-100"></div>
+                            <div class="col">
+
+                                <div class="col" style="border: 1px solid grey;">
+                                    <input type="radio" class="check_btn" name="check" onclick="f2()">
+                                    <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-cart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                                      </svg><br> Single cost</div>
+                            </div>
+                            <div class="col">
+                                <div class="col" style="border: 1px solid grey;">
+                                    <input type="radio" class="check_btn" name="check" onclick="f7()">
+                                    <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-cart-plus-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                                      </svg> <br> Multiple cost</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-primary" id="btn2" data-toggle="modal" data-dismiss="modal">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 3 -->
+    <div class="modal fade " id="staticBackdro" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col" style="padding: 0px;">
+                                <svg width="2em" height="2em" style="float: left; padding:0px" viewBox="0 0 16 16" class="bi bi-arrow-left-short close" data-dismiss="modal" aria-label="Close" fill="currentColor" xmlns="http://www.w3.org/2000/svg" onclick="fade1()">
+                                <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                              </svg>
+                            </div>
+                            <div class="col-6">
+                                <h5 class="modal-title"> Price & Availability </h5>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body " style="margin-bottom:20px ;">
+                    <div class="container">
+                        <div class="row" style="margin-top: 10px; ">
+                            <div class="col">Price of ticket?</div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <!-- <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-wallet" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5V3zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a1.99 1.99 0 0 1-1-.268zM1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1z"/>
+                                          </svg>  -->₹
+                                </button><input type="text" placeholder="Price per ticket" value="" id="single_price" style="border: none;font-family: IBM Plex Sans;
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 23px;
+                                letter-spacing: 0em;
+                                text-align: left;
+                                ">
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#" onclick="singleclick_price()">100</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 20px;">
+                            <div class="col">Availability?</div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col" style="border: 1px solid grey; border-radius: 5px;">
+                                            <input type="radio" name="mode" onclick="f3()"> <span style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px;">Online</span>
+                                        </div>
+                                        <div class="col" style="border: 1px solid grey; border-radius: 5px;">
+                                            <input type="radio" name="mode" onclick="f3()"> <span style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px;">Offline</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-success" id="btn3" data-toggle="modal" data-dismiss="modal" style="font-size: 10px;">Done👌</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Multiple cost -->
+    <div class="modal fade " id="staticBackdr" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col" style="padding: 0px;">
+                                <svg width="2em" height="2em" style="float: left; padding:0px" viewBox="0 0 16 16" class="bi bi-arrow-left-short close" data-dismiss="modal" data-target="staticBackdro" aria-label="Close" fill="currentColor" xmlns="http://www.w3.org/2000/svg" onclick="fade1()">
+                                <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                              </svg>
+                            </div>
+                            <div class="col-6">
+                                <h5 class="modal-title"> Multiple Ticket </h5>
+                            </div>
+                            <div class="col">
+
+                                <button type="button" class="btn btn-light" id="cat_button" style="padding: 0px;margin: 0px; border; color:rgb(83, 83, 255)" onclick="f4()">
+                                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                  </svg>Category</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body " id="body1" style="margin-bottom:20px ;">
+                    <div class="row">
+                        <div class="col">
+                            1.
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col" style="font-family: IBM Plex Sans;
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 23px;
+                                letter-spacing: 0em;
+                                text-align: left;
+                                ">Category</div>
+                                <div class="col"></div>
+                                <div class="w-100"></div>
+                                <div class="col" style="padding-left: 50px; width: 300px; "><input type="text" name="" id="cat_" value="" placeholder="Example:Entry, food, or parking etc." style="border: none; width: 300px;background-color: #F7F7F7; border-radius: 4px;"></div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col" style="font-family: IBM Plex Sans;
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 23px;
+                                letter-spacing: 0em;
+                                text-align: left;
+                               ">Description</div>
+                                <div class="col"></div>
+                                <div class="w-100"></div>
+                                <div class="col" style="padding-left: 50px;">
+                                    <input type="text" name="" id="" placeholder="Description" style=" border: none; background-color: #F7F7F7; border-radius: 4px;"></div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col" style="font-family: IBM Plex Sans;
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 23px;
+                                letter-spacing: 0em;
+                                text-align: left;
+                                ">Ticket price for this category?</div>
+                                <!-- <div class="col"></div> -->
+                                <div class="w-100"></div>
+                                <div class="col">
+                                    <div class="dropdown">
+                                        <div class="container" id="val_price2" style="margin-top: 5px;">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButto" style="padding: 0px;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <!-- <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-wallet" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5V3zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a1.99 1.99 0 0 1-1-.268zM1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1z"/>
+                                                  </svg>  -->₹
+                                        </button><input type="text" id="price" placeholder="Price per ticket" value="" style="border: none;font-family: IBM Plex Sans;
+                                        font-size: 18px;
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        line-height: 23px;
+                                        letter-spacing: 0em;
+                                        text-align: left;
+                                        background-color: #F7F7F7; border-radius: 4px; ">
+
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <button class="dropdown-item" href="#" onclick="click_price()">100</button>
+                                                <button class="dropdown-item" href="#" onclick="click_price2()">200</button>
+                                                <button class="dropdown-item" href="#" onclick="click_price3()">300</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- <div class="col"></div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="margin-top: 70px;">
+
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">Total cost:₹ <span id="cost" placeholder=""></span> </div>
+                                <div class="col"><button type="button" class="btn btn-success" id="done_btn" style="float: right;font-size: 10px;" data-toggle="modal" data-target="#staticBackdr" data-dismiss="modal" aria-label="Close" fill="currentColor" onclick="validate2()">Done👌
+                            </button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body " id="body2" style="margin-bottom:20px ;">
+                    <div class="row">
+                        <div class="col">
+                            1.
+                            <span id="content"></span> ₹
+                            <span id="content2"></span>
+                        </div>
+
+                        <div class="col">
+                            <button type="button" class="btn btn-light" id="display1" onclick="f5()" style="float: right;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                              </svg></button>
+
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    2.
+                                    <span id="content3"></span> ₹
+                                    <span id="content4"></span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col" style="font-family: IBM Plex Sans;
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 23px;
+                                letter-spacing: 0em;
+                                text-align: left;
+                                ">Category</div>
+                                <div class="col"></div>
+                                <div class="w-100"></div>
+                                <div class="col" style="padding-left: 50px; width: 300px; "><input type="text" name="" id="cat2" value="" placeholder="Example:Entry, food, or parking etc." style="border: none; width: 300px;"></div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col" style="font-family: IBM Plex Sans;
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 23px;
+                                letter-spacing: 0em;
+                                text-align: left;
+                               ">Description</div>
+                                <div class="col"></div>
+                                <div class="w-100"></div>
+                                <div class="col" style="padding-left: 50px;"><input type="text" name="" id="" placeholder="Description" style=" border: none;"></div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col" style="font-family: IBM Plex Sans;
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 23px;
+                                letter-spacing: 0em;
+                                text-align: left;
+                                ">Ticket price for this category?</div>
+                                <!-- <div class="col"></div> -->
+                                <div class="w-100"></div>
+                                <div class="col">
+                                    <div class="dropdown">
+                                        <div class="container " id="val_price" style="margin-top: 5px;">
+                                            <button class="btn btn-secondary dropdown-toggle" style="padding: 0px;" type="button" id="dropdownMenuBtton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <!-- <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-wallet" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5V3zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a1.99 1.99 0 0 1-1-.268zM1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1z"/>
+                                                  </svg>  -->₹
+                                        </button><input type="text" id="price2" placeholder="Price per ticket" value="" style="font-family: IBM Plex Sans;
+                                        font-size: 18px;
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        line-height: 23px;
+                                        letter-spacing: 0em;
+                                        text-align: left;
+                                        border: none;">
+
+
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <button class="dropdown-item" href="#" onclick="click_price4()">100</button>
+                                                <button class="dropdown-item" href="#" onclick="click_price5()">200</button>
+                                                <button class="dropdown-item" href="#" onclick="click_price6()">300</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col"></div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="margin-top: 70px;">
+
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">Total cost:₹ <span id="cost2"></span> </div>
+                                <div class="col"><button type="button" class="btn btn-success" style="float: right;font-size: 10px;" data-dismiss="modal" aria-label="Close" fill="currentColor" onclick="validate()" data-toggle="modal" id="btn5">Done👌
+                            </button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 category -->
+                <div class="modal-body " id="body3" style="margin-bottom:20px ;">
+                    <div class="row">
+                        <div class="col">
+                            1.
+                            <span id="content5"></span> ₹
+                            <span id="content6"></span>
+                        </div>
+
+                        <div class="col" style="padding: 0px;">
+                            <button type="button" class="btn btn-light" id="display2" onclick="f()" style="float: right;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                              </svg></button>
+
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    2.
+                                    <span id="content7"></span> ₹
+                                    <span id="content8"></span>
+                                </div>
+                                <div class="col" style="padding: 0px;">
+                                    <button type="button" class="btn btn-light" id="display3" onclick="hide2()" style="float: right;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                                        <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                                      </svg></button>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    3.
+                                    <span id="content9"></span> ₹
+                                    <span id="content10"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col" style="font-family: IBM Plex Sans;
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 23px;
+                                letter-spacing: 0em;
+                                text-align: left;
+                                ">Category</div>
+                                <div class="col"></div>
+                                <div class="w-100"></div>
+                                <div class="col" style="padding-left: 50px; width: 300px; "><input type="text" name="" id="cat3" value="" placeholder="Example:Entry, food, or parking etc." style="border: none; width: 300px;"></div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col" style="font-family: IBM Plex Sans;
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 23px;
+                                letter-spacing: 0em;
+                                text-align: left;
+                               ">Description</div>
+                                <div class="col"></div>
+                                <div class="w-100"></div>
+                                <div class="col" style="padding-left: 50px;"><input type="text" name="" id="" placeholder="Description" style=" border: none;"></div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col" style="font-family: IBM Plex Sans;
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 23px;
+                                letter-spacing: 0em;
+                                text-align: left;
+                                ">Ticket price for this category?</div>
+                                <!-- <div class="col"></div> -->
+                                <div class="w-100"></div>
+                                <div class="col">
+                                    <div class="dropdown">
+                                        <div class="container " id="val_price3" style="margin-top: 5px;">
+                                            <button class="btn btn-secondary dropdown-toggle" style="padding: 0px;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                ₹
+                                        </button><input type="text" id="price3" placeholder="Price per ticket" value="" style="font-family: IBM Plex Sans;
+                                        font-size: 18px;
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        line-height: 23px;
+                                        letter-spacing: 0em;
+                                        text-align: left;
+                                        border: none;">
+
+
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <button class="dropdown-item" href="#" onclick="click_price7()">100</button>
+                                                <button class="dropdown-item" href="#" onclick="click_price8()">200</button>
+                                                <button class="dropdown-item" href="#" onclick="click_price9()">300</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col"></div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="margin-top: 70px;">
+
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">Total cost:₹ <span id="cost3"></span> </div>
+                                <div class="col"><button type="button" class="btn btn-success" id="btn7" style="float: right;font-size: 10px;" onclick="validate3()" data-dismiss="modal" aria-label="Close" fill="currentColor" data-toggle="modal" id="btn6">Done👌
+                            </button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- new -->
+    <!-- <div class="modal fade " id="staticBackd" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col" style="padding: 0px;">
+                                <svg width="2em" height="2em" style="float: left; padding:0px" viewBox="0 0 16 16" class="bi bi-arrow-left-short close" data-dismiss="modal" aria-label="Close" fill="currentColor" xmlns="http://www.w3.org/2000/svg" onclick="fade1()">
+                                <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                              </svg>
+                            </div>
+                            <div class="col-6">
+                                <h5 class="modal-title"> Price & Availability </h5>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body " style="margin-bottom:20px ;">
+                    <div class="container">
+                        <div class="row" style="margin-top: 10px; ">
+                            <div class="col">Price of ticket?</div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="dropdown">
+                                    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-wallet" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M0 3a2 2 0 0 1 2-2h13.5a.5.5 0 0 1 0 1H15v2a1 1 0 0 1 1 1v8.5a1.5 1.5 0 0 1-1.5 1.5h-12A2.5 2.5 0 0 1 0 12.5V3zm1 1.732V12.5A1.5 1.5 0 0 0 2.5 14h12a.5.5 0 0 0 .5-.5V5H2a1.99 1.99 0 0 1-1-.268zM1 3a1 1 0 0 0 1 1h12V2H2a1 1 0 0 0-1 1z"/>
+                                          </svg> 
+                                </button><input type="text" placeholder="Price per ticket" style="border: none;font-family: IBM Plex Sans;
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 23px;
+                                letter-spacing: 0em;
+                                text-align: left;
+                                ">
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top: 20px;">
+                            <div class="col">Availability?</div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col" style="border: 1px solid grey; border-radius: 5px;">
+                                            <input type="radio" name="mod" onclick="f3()"> <span style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px;">Online</span>
+                                        </div>
+                                        <div class="col" style="border: 1px solid grey; border-radius: 5px;">
+                                            <input type="radio" name="modess" onclick="f3()"> <span style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px;">Offline</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-success" id="btn4" data-toggle="modal" data-target="#staticBackdr" style="font-size: 10px;">Done👌</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="javascript/jqueryui/jquery-ui.js"></script>
+<script>
+    document.getElementById("main_btn").click();
+    document.getElementById("btn1").disabled = true;
+    document.getElementById("btn2").disabled = true;
+    document.getElementById("btn3").disabled = true;
+
+    document.getElementById("body2").style.display = "none";
+    var d = document.getElementById("body3");
+    d.style.display = "none";
+
+    function singleclick_price() {
+        var x = document.getElementById("single_price");
+        x.setAttribute("value", "100");
+    }
+
+    function fi() {
+        document.getElementById("btn1").disabled = false;
+        document.getElementById("btn1").setAttribute("data-target", "");
+
+
+    }
+
+    function f1() {
+        document.getElementById("btn1").disabled = false;
+        document.getElementById("btn1").setAttribute("data-target", "#exampleModal");
+    }
+
+    function f2() {
+        document.getElementById("btn2").disabled = false;
+        document.getElementById("btn2").setAttribute("data-target", "#staticBackdro");
+
+    }
+
+    function f7() {
+        document.getElementById("btn2").disabled = false;
+        document.getElementById("btn2").setAttribute("data-target", "#staticBackdr");
+    }
+
+    function f3() {
+        document.getElementById("btn3").disabled = false;
+
+    }
+
+    function f6() {
+        document.getElementById("btn3").disabled = false;
+        document.getElementById("btn3").setAttribute("data-target", "#staticBackdr");
+    }
+
+    function f() {
+        document.getElementById("body1").style.display = "block";
+        document.getElementById("body2").style.display = "none";
+        document.getElementById("body3").style.display = "none";
+    }
+
+    function hide2() {
+        document.getElementById("body2").style.display = "block";
+        document.getElementById("body3").style.display = "none";
+    }
+
+    function click_price() {
+        var x = document.getElementById("price");
+        var y = document.getElementById("cost");
+        x.setAttribute("value", "100");
+        y.innerHTML = "100";
+        document.getElementById("val_price2").classList.remove("price2_cont");
+    }
+
+    function click_price2() {
+        var x = document.getElementById("price");
+        var y = document.getElementById("cost");
+        x.setAttribute("value", "200");
+        y.innerHTML = "200";
+        document.getElementById("val_price2").classList.remove("price2_cont");
+    }
+
+    function click_price3() {
+        var x = document.getElementById("price");
+        var y = document.getElementById("cost");
+        x.setAttribute("value", "300");
+        y.innerHTML = "300";
+        document.getElementById("val_price2").classList.remove("price2_cont");
+    }
+
+    function f4() {
+        var p2 = document.getElementById("price").value;
+        if (p2 != "") {
+            var x = document.getElementById("body1");
+            x.style.display = "none";
+            var y = document.getElementById("body2");
+            y.style.display = "block";
+        } else {
+            document.getElementById("val_price2").classList.add("price2_cont");
+        }
+
+        var a = document.getElementById("cat_").value;
+        document.getElementById("content").innerHTML = a;
+        var b = document.getElementById("price").getAttribute("value");
+        document.getElementById("content2").innerHTML = b;
+        var p = document.getElementById("price2").value;
+
+        if (p != "") {
+            y.style.display = "none";
+            document.getElementById("body3").style.display = "block";
+            var val1 = document.getElementById("content");
+            var val2 = document.getElementById("content2");
+
+            document.getElementById("content5").innerHTML = a;
+            document.getElementById("content6").innerHTML = b;
+            // document.getElementById("val_price").classList.remove("price2_cont");
+
+
+        }
+        //  else {
+        //     document.getElementById("val_price").classList.add("price2_cont");
+        // }
+
+    }
+
+
+    function f5() {
+        var x = document.getElementById("body1");
+        x.style.display = "block";
+        var y = document.getElementById("body2");
+        y.style.display = "none";
+        var a = document.getElementById("cat_").value;
+        document.getElementById("content").innerHTML = a;
+        var b = document.getElementById("price").value;
+        document.getElementById("content2").innerHTML = b;
+
+
+    }
+
+    function click_price4() {
+        var x = document.getElementById("price2");
+        var y = document.getElementById("cost2");
+        x.setAttribute("value", "100");
+
+        var c = document.getElementById("price2").value;
+        document.getElementById("content4").innerHTML = c;
+        var b = document.getElementById("price").value;
+        var val = document.getElementById("cat2").value;
+        document.getElementById("content3").innerHTML = val;
+        document.getElementById("content7").innerHTML = val;
+        document.getElementById("content8").innerHTML = c;
+
+        var sum = 0;
+        b = parseInt(b, 10);
+        c = parseInt(c, 10);
+        sum = (b + c);
+        y.innerHTML = sum;
+
+    }
+
+    function click_price5() {
+        var x = document.getElementById("price2");
+        var y = document.getElementById("cost2");
+        x.setAttribute("value", "200");
+
+        var c = document.getElementById("price2").value;
+        document.getElementById("content4").innerHTML = c;
+        var b = document.getElementById("price").value;
+        var val = document.getElementById("cat2").value;
+        document.getElementById("content3").innerHTML = val;
+        document.getElementById("content7").innerHTML = val;
+        document.getElementById("content8").innerHTML = c;
+        var sum = 0;
+        b = parseInt(b, 10);
+        c = parseInt(c, 10);
+        sum = (b + c);
+        y.innerHTML = sum;
+    }
+
+    function click_price6() {
+        var x = document.getElementById("price2");
+        var y = document.getElementById("cost2");
+        x.setAttribute("value", "300");
+
+        var val = document.getElementById("cat2").value;
+        document.getElementById("content3").innerHTML = val;
+        var c = document.getElementById("price2").value;
+        document.getElementById("content4").innerHTML = c;
+        var b = document.getElementById("price").value;
+        document.getElementById("content7").innerHTML = val;
+        document.getElementById("content8").innerHTML = c;
+
+        var sum = 0;
+        b = parseInt(b, 10);
+        c = parseInt(c, 10);
+        sum = (b + c);
+        y.innerHTML = sum;
+    }
+
+
+    function validate() {
+        var x = document.getElementById("price2").value;
+        var y = document.getElementById("btn5");
+        if (x === "") {
+            y.setAttribute("data-target", "");
+            y.setAttribute("data-dismiss", "");
+            var a = document.getElementById("val_price");
+            a.classList.add("price2_cont");
+
+
+        } else {
+
+            y.setAttribute("data-target", "#staticBackd");
+            y.setAttribute("data-dismiss", "modal");
+        }
+    }
+
+    function validate2() {
+        var x = document.getElementById("price").value;
+        var y = document.getElementById("done_btn");
+        if (x === "") {
+            y.setAttribute("data-target", "");
+            y.setAttribute("data-dismiss", "");
+            var a = document.getElementById("val_price2");
+            a.classList.add("price2_cont");
+        } else {
+
+            y.setAttribute("data-target", "#staticBackd");
+            y.setAttribute("data-dismiss", "modal");
+        }
+
+    }
+
+    function validate3() {
+        var x = document.getElementById("price3").value;
+        if (x === "") {
+            document.getElementById("btn7").setAttribute("data-dismiss", "#");
+            document.getElementById("val_price3").classList.add("price2_cont");
+
+        } else {
+            document.getElementById("btn7").setAttribute("data-dismiss", "modal");
+        }
+    }
+
+    function click_price7() {
+
+        var x = document.getElementById("price3");
+        x.setAttribute("value", "100");
+        var z = x.value;
+        var y = document.getElementById("cat3").value;
+        document.getElementById("content9").innerHTML = y;
+        document.getElementById("content10").innerHTML = z;
+        var final = document.getElementById("cost3");
+        var v1 = document.getElementById("price").value;
+        var v2 = document.getElementById("price2").value;
+        var v3 = document.getElementById("price3").value;
+        document.getElementById("val_price3").classList.remove("price2_cont");
+        var sum = 0;
+        v1 = parseInt(v1, 10);
+        v2 = parseInt(v2, 10);
+        v3 = parseInt(v3, 10);
+        sum = (v1 + v2 + v3);
+        final.innerHTML = sum;
+
+    }
+
+    function click_price8() {
+
+        var x = document.getElementById("price3");
+        x.setAttribute("value", "200");
+        var z = x.value;
+        var y = document.getElementById("cat3").value;
+        document.getElementById("content9").innerHTML = y;
+        document.getElementById("content10").innerHTML = z;
+        var final = document.getElementById("cost3");
+        var v1 = document.getElementById("price").value;
+        var v2 = document.getElementById("price2").value;
+        var v3 = document.getElementById("price3").value;
+        document.getElementById("val_price3").classList.remove("price2_cont");
+        var sum = 0;
+        v1 = parseInt(v1, 10);
+        v2 = parseInt(v2, 10);
+        v3 = parseInt(v3, 10);
+        sum = (v1 + v2 + v3);
+        final.innerHTML = sum;
+    }
+
+    function click_price9() {
+
+        var x = document.getElementById("price3");
+        x.setAttribute("value", "300");
+        var z = x.value;
+        var y = document.getElementById("cat3").value;
+        document.getElementById("content9").innerHTML = y;
+        document.getElementById("content10").innerHTML = z;
+        var final = document.getElementById("cost3");
+        var v1 = document.getElementById("price").value;
+        var v2 = document.getElementById("price2").value;
+        var v3 = document.getElementById("price3").value;
+        document.getElementById("val_price3").classList.remove("price2_cont");
+        var sum = 0;
+        v1 = parseInt(v1, 10);
+        v2 = parseInt(v2, 10);
+        v3 = parseInt(v3, 10);
+        sum = (v1 + v2 + v3);
+        final.innerHTML = sum;
+    }
+</script>
+
+</html>

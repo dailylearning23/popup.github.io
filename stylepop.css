@@ -1,0 +1,15 @@
+/* div {
+    border: 1px solid black;
+} */
+
+.check_btn {
+    float: right;
+}
+
+.price2_cont {
+    border: 2px solid red;
+    float: left;
+    padding: 0px;
+    width: 60%;
+    border-radius: 4px;
+}
